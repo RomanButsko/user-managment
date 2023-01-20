@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Button, Stack } from 'react-bootstrap';
 
 function App() {
   return (
@@ -18,6 +19,14 @@ function App() {
         >
           Learn React
         </a>
+        <Stack direction="horizontal" gap={2}>
+  <Button as="a" variant="primary">
+    Button as link
+  </Button>
+  <Button as="a" variant="success">
+    Button as link
+  </Button>
+</Stack>
       </header>
     </div>
   );
