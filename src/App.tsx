@@ -1,35 +1,9 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button, Stack } from 'react-bootstrap';
+import { RouterProvider } from 'react-router-dom'
+
+import router from './router'
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <Stack direction="horizontal" gap={2}>
-  <Button as="a" variant="primary">
-    Button as link
-  </Button>
-  <Button as="a" variant="success">
-    Button as link
-  </Button>
-</Stack>
-      </header>
-    </div>
-  );
+    return <RouterProvider router={router} />
 }
 
-export default App;
+export default App
