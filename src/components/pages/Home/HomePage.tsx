@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import { useActions } from '../../../hook/useActions'
 import { useAuth } from '../../../hook/useAuth'
@@ -16,7 +16,9 @@ const HomePage = () => {
 
     const { hasAccess } = useActions()
 
-    userData.user && hasAccess(userData.user.email)
+    useEffect(() => {
+        userData.user && hasAccess(userData.user.email)
+    }, [userData, data])
 
     return (
         <>
