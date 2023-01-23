@@ -13,7 +13,7 @@ const config = {
 
 export const registerUser = createAsyncThunk<IUser, IUserRegister>(
     'auth/register',
-    async ({ name, email, password }, {rejectWithValue}) => {
+    async ({ name, email, password }, { rejectWithValue }) => {
         try {
             const { data } = await axios.post(
                 `${ApiURL}auth/register`,
@@ -33,7 +33,7 @@ export const registerUser = createAsyncThunk<IUser, IUserRegister>(
 
 export const login = createAsyncThunk<any, IUserLogin>(
     'auth/login',
-    async ({ email, password }, {rejectWithValue}) => {
+    async ({ email, password }, { rejectWithValue }) => {
         try {
             const { data } = await axios.post(
                 `${ApiURL}auth/login`,

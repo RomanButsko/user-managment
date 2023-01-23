@@ -6,7 +6,7 @@ export interface IUserRegister {
     password: string
 }
 
-export type IUserLogin = Omit<IUserRegister, "name">;
+export type IUserLogin = Omit<IUserRegister, 'name'>
 
 export interface IinitialState {
     isLoading: boolean

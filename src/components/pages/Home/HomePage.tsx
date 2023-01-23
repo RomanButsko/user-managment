@@ -10,9 +10,9 @@ import Toolbar from '../../toolbar/Toolbar'
 const HomePage = () => {
     const [selectedBox, setSelectBox] = useState<number[]>([])
 
-    const { data } = useGetUsersQuery()
-
     const userData = useAuth()
+
+    const { data } = useGetUsersQuery()
 
     const { hasAccess } = useActions()
 

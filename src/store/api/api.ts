@@ -55,4 +55,5 @@ export const {
     useDeleteFromListMutation,
     useUpdateStatusBlockMutation,
     useUpdateStatusUnBlockMutation,
+    useLazyGetUsersQuery,
 } = api

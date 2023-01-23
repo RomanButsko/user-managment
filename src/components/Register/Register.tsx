@@ -15,6 +15,7 @@ const Register: FC<IRegister> = ({ setRegister }) => {
         email: '',
         password: '',
     })
+
     const { registerUser } = useActions()
     const { error } = useAuth()
 
@@ -52,9 +53,7 @@ const Register: FC<IRegister> = ({ setRegister }) => {
                 </Modal.Header>
                 <Modal.Body>
                     <Form onSubmit={handleSubmit}>
-                        <Form.Group
-                            className="mb-3"
-                        >
+                        <Form.Group className="mb-3">
                             <Form.Label>Name</Form.Label>
                             <Form.Control
                                 placeholder="Alex Spinov"
@@ -82,7 +81,9 @@ const Register: FC<IRegister> = ({ setRegister }) => {
                                     handleInput('password', e.target.value)
                                 }
                             />
-                        {error && <div style={{ color: 'red' }}>{error}</div>}
+                            {error && (
+                                <div style={{ color: 'red' }}>{error}</div>
+                            )}
                         </Form.Group>
                         <Button variant="secondary" onClick={handleClose}>
                             Close

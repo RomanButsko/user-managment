@@ -2,16 +2,15 @@ import { FC } from 'react'
 import { Button, ButtonGroup } from 'react-bootstrap'
 import Container from 'react-bootstrap/Container'
 import Navbar from 'react-bootstrap/Navbar'
-
-import { SiAdblock } from 'react-icons/si';
-import { AiFillDelete } from 'react-icons/ai';
-import style from './Toolbar.module.css'
+import { AiFillDelete } from 'react-icons/ai'
+import { SiAdblock } from 'react-icons/si'
 
 import {
     useDeleteFromListMutation,
     useUpdateStatusBlockMutation,
     useUpdateStatusUnBlockMutation,
 } from '../../store/api/api'
+import style from './Toolbar.module.css'
 import { IToolbar } from './toolbar.interface'
 
 const Toolbar: FC<IToolbar> = ({ selectedBox, setSelectBox }) => {
@@ -41,11 +40,26 @@ const Toolbar: FC<IToolbar> = ({ selectedBox, setSelectBox }) => {
             <Container>
                 <Navbar.Brand href="/">ITransition-4</Navbar.Brand>
                 <Navbar.Collapse className="justify-content-end">
-                    <Button className={style.btns} variant="secondary" onClick={handleBlock}>
-                            Block
+                    <Button
+                        className={style.btns}
+                        variant="secondary"
+                        onClick={handleBlock}
+                    >
+                        Block
                     </Button>{' '}
-                    <SiAdblock className={style.btns} cursor="pointer" color='#ffff'size={35} onClick={handleUnBlock}/>{' '}
-                    <AiFillDelete cursor="pointer" color='#ffff'size={35} onClick={handleDelete}/>{' '}
+                    <SiAdblock
+                        className={style.btns}
+                        cursor="pointer"
+                        color="#ffff"
+                        size={35}
+                        onClick={handleUnBlock}
+                    />{' '}
+                    <AiFillDelete
+                        cursor="pointer"
+                        color="#ffff"
+                        size={35}
+                        onClick={handleDelete}
+                    />{' '}
                 </Navbar.Collapse>
             </Container>
         </Navbar>

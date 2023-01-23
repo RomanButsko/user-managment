@@ -1,0 +1,10 @@
+.container {
+    background-color: #ffff;
+    border: none;
+}
+
+.signIn {
+    border-radius: 15px;
+    background-color: rgb(114, 74, 236);
+    border: none;
+}
