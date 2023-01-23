@@ -1,1 +1,1 @@
-export const ApiURL = `https://user-managment.onrender.com /`
+export const ApiURL = `https://user-managment.onrender.com/`
